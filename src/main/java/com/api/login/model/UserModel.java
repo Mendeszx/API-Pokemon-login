@@ -10,7 +10,7 @@ public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
 
     @Column(name = "nome", length = 100, nullable = false)
     private String nome;
@@ -20,18 +20,6 @@ public class UserModel {
 
     @Column(name = "senha", length = 255, nullable = false)
     private String senha;
-
-    @Column(name = "observacao")
-    @Type(type = "text")
-    private String observacao;
-
-    public String getObservacao() {
-        return observacao;
-    }
-
-    public void setObservacao(String observacao) {
-        this.observacao = observacao;
-    }
 
     public int getId() {
         return id;
