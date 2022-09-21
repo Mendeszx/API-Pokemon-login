@@ -18,10 +18,10 @@ public class LoginController {
     public String logar(Model model, String email, String senha){
         UserModel userModel = this.repository.Login(email,senha);
         if (userModel != null){
-            return "redirect:https://pokedex-mendes-dev.herokuapp.com/";
+            //return "redirect:https://pokedex-mendes-dev.herokuapp.com/";
+            return "entrou";
         }
-        model.addAttribute("erro", "Usuário ou senha inválidos");
-        return "http://127.0.0.1:5500/index.html";
+        return "erro";
     }
 
 
