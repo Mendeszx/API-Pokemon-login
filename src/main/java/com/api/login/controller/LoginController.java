@@ -15,10 +15,8 @@ public class LoginController {
     private Repository repository;
 
     @PostMapping("/logar")
-    public String logar(Model model, String email, String senha){
-        UserModel userModel = this.repository.Login(email,senha);
-        if (userModel != null){
-            //return "redirect:https://pokedex-mendes-dev.herokuapp.com/";
+    public String logar(@RequestBody UserModel model){
+        if (repository.findByEmail(model.getEmail()).isPresent()){
             return "entrou";
         }
         return "erro";

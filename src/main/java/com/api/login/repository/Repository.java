@@ -7,6 +7,5 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Optional;
 
 public interface Repository extends JpaRepository<UserModel,Integer> {
-    @Query(value="select * from administradores where email = :email and senha = :senha", nativeQuery = true)
-    public UserModel Login(String email, String senha);
+    Optional<String> findByEmail(String email);
 }
