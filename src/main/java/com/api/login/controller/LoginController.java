@@ -15,8 +15,8 @@ public class LoginController {
     private Repository repository;
 
     @PostMapping("/logar")
-    public String logar(@RequestBody UserModel model){
-        if (repository.findByEmail(model.getEmail()).isPresent()){
+    public String logar(@RequestBody String email, String senha){
+        if (repository.findByEmail(email).isPresent()){
             return "entrou";
         }
         return "erro";
