@@ -49,7 +49,7 @@ public class UserModel {
         return username;
     }
 
-    public void setUsername(String nome) {
+    public void setUsername(String username) {
         this.username = username;
     }
 }
