@@ -25,6 +25,11 @@ public class LoginController {
                 return true;
             }
         }
+        if (repository.existsByUsername(UserLogin.getEmail())){
+            if (repository.existsBySenha(UserLogin.getSenha())){
+                return true;
+            }
+        }
         return false;
     }
 

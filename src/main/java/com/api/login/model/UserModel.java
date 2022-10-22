@@ -12,8 +12,8 @@ public class UserModel {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "nome", length = 100, nullable = false)
-    private String nome;
+    @Column(name = "username", length = 100, nullable = false)
+    private String username;
 
     @Column(name = "email", length = 180, nullable = false)
     private String email;
@@ -45,11 +45,11 @@ public class UserModel {
         this.email = email;
     }
 
-    public String getNome() {
-        return nome;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setUsername(String nome) {
+        this.username = username;
     }
 }
